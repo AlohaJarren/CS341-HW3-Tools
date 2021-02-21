@@ -1,3 +1,4 @@
+//  Jarren Calizo
 //  JavaScript Code Found Here
 $(document).ready(function(){
     // Modification #1
