@@ -1,0 +1,196 @@
+/* Jarren Calizo, calizo23_styles.css */
+#cakePic {
+    width: 20em; /* shrink cheesecake image to 20% of original size */
+    height: auto; 
+}
+
+body {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+    background-image: url("https://images.pexels.com/photos/172289/pexels-photo-172289.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: 100% 100%;
+}
+
+ .backgroundImg {
+    float:left;
+    flex-direction: column;
+    flex-wrap:wrap;
+    margin-left: 10%;
+    content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 35%;
+} 
+
+.jarProf {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 450px;
+    height: 450px;
+    margin-right: 10%;
+    transition: 0.5s;
+    background: #060c21;
+    float: right;
+}
+
+.jarProf:hover{
+    height: 550px;
+}
+
+.jarProf .jarrenPic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.jarProf .jarrenPic img {
+    max-width: 100%;
+    opacity: 0.1;
+    transition: 0.5s;
+}
+
+.jarProf:hover .jarrenPic img {
+    opacity: 1;
+}
+.jarProf:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.jarProf:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+
+.jarProf:before, .jarProf:after {
+    background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+.jarProf:nth-child(2):before, .jarProf:nth-child(2):after {
+    background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+}
+
+.jarProf:nth-child(3):before, .jarProf:nth-child(3):after {
+    background: linear-gradient(235deg, #772aff, #010615, #2196F3);
+}
+
+.jarProf .jarrenContent {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 90px;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.jarProf:hover .jarrenContent {
+    opacity: 1;
+}
+
+.jarProf .jarrenContent #bakerName {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 20px;
+}
+.jarProf .jarrenContent #bakerName span {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 200;
+    line-height: 2px;
+}
+
+/* External Citation
+Date:       08 February 2021
+Problem:    Forgot how to incorporate a hoverable dropdown
+Resource:   https://www.w3schools.com/howto/howto_css_dropdown.asp
+Solution:   Utilized majority of the same divs and classes on 
+            html and css with tweaks (e.g. ids on dropdown-content) */
+.dropbtn {
+background-color: #f308ff;
+color: white;
+padding: 15%;
+font-size: 95%;
+border: none;
+font-family: 'Merriweather', serif;
+}
+
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    max-height: 6em;/* you can change as you need it */
+    overflow:auto;/* to get scroll */
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #070607;
+}
+
+#numOfCheesecakes {
+    margin-left: 8em;
+}
+
+#orderButton {
+    margin-left: 13em;
+}
+
+#thankYouMessage {
+    text-align: center;
+}

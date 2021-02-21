@@ -1,0 +1,128 @@
+<!-- Jarren Calizo, calizo23_index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- HTML Document Encoding -->
+    <meta charset="UTF-8"> 
+
+    <!-- Tells Browser Page's Sizing for Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Embed JQuery Library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Embed Google Stylesheet Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" 
+    rel="stylesheet"> 
+
+    <!-- HTML Page Header -->
+    <title>Jarren's Cheesecake Delight</title>
+
+    <!-- Link Stylesheet to HTML Document -->
+    <link rel="stylesheet" href="stylesheets/calizo23_styles.css">
+
+    <!-- Add Favicon Icon-->
+    <link rel="icon" href="https://bit.ly/2OkH95H" type="image/png">
+</head>
+<body>
+    <div class="backgroundImg">
+        
+        <!-- Title of Page -->
+        <h1>Cheesecake Order Form</h1> 
+
+        <!-- Wikimedia Cheesecake -->
+        <img id="cakePic" src="https://bit.ly/3cyAWxc" alt="Wikimedia Cheesecake">
+
+        <!-- Text Below Image -->
+        <p> Quantity Topping</p>
+
+        <div class="formSection"> 
+            <table>
+                <td>
+                    <!-- Dropdown Menu For Ordering Cheesecakes -->
+                    <select name="drop-down-list" id="numOfCheesecakes">
+                        <option value="1"> 1 </option> 
+                        <option value="2"> 2 </option> 
+                        <option value="3"> 3 </option> 
+                        <option value="4"> 4 </option> 
+                </td>
+                <td>
+                    <!-- Radio Button Options -->
+                    <input type="radio" class="toppings" id="plain" name="flavor" value="plainFlavor">
+                    <label for="plain">Plain</label><br>
+                    <input type="radio" class="toppings" id="cherry" name="flavor" value="cherryFlavor">
+                    <label for="cherry">Cherry</label><br>
+                    <input type="radio" class="toppings" id="chocolate" name="flavor" value="chocolateFlavor">
+                    <label for="chocolate">Chocolate</label> <br>
+                </td>
+            </select>
+            </table>
+                
+            <!-- Breakline -->
+            <br>
+
+            <!-- Special Instructions Order Notes -->
+            <p class="formSection"> 
+                <label> Notes:</label>
+                <textarea id = "textBox" rows = "3" cols = "40" value=""
+                placeholder="Enter any special instructions here."></textarea>
+            </p>
+                
+            <!-- Order Button For Future Use-->
+            <button type="button" class="formSection" id="orderButton"> Order</button>
+        </div>
+
+        <h2 id="thankYouMessage"></h2>
+
+        <!-- HW#1: <h3 id="orderHistory"> Total Orders Last Month</h3> -->
+        <!-- Order History -->
+        <h3 class="orderHistory" id = "ordersFor"> Orders for 
+            <!-- 
+                External Citation
+                Date:       08 February 2021
+                Problem:    Forgot how to incorporate a hoverable dropdown
+                Resource:   https://www.w3schools.com/howto/howto_css_dropdown.asp
+                Solution:   Utilized majority of the same divs and classes on 
+                            html and css with tweaks (e.g. ids on dropdown-content)
+             -->
+            <div class="dropdown">
+                <button class="dropbtn" id="monthAdjust"> Jan</button>
+                <div class="dropdown-content">
+                    <a id="Jan" href="#">Jan</a>
+                    <a id="Feb" href="#">Feb</a>
+                    <a id="Mar" href="#">Mar</a>
+                    <a id="Apr" href="#">Apr</a>
+                    <a id="May" href="#">May</a>
+                    <a id="Jun" href="#">Jun</a>
+                    <a id="Jul" href="#">Jul</a>
+                    <a id="Aug" href="#">Aug</a>
+                    <a id="Sep" href="#">Sep</a>
+                    <a id="Oct" href="#">Oct</a>
+                    <a id="Nov" href="#">Nov</a>
+                    <a id="Dec" href="#">Dec</a> 
+                </div>
+            </div> 
+        </h3>
+        <ul> 
+            <li> 12 cherry </li>
+            <li> 14 chocolate </li>
+            <li> 31 plain </li>
+        </ul>
+
+    </div>
+    
+    <!-- Creator's Profile Touch -->
+    <div class="jarProf" id="flexbox2">
+        <div class="jarrenPic">
+            <img src="https://miro.medium.com/fit/c/1360/1360/1*lXykl2jnGDY9TYAtuQcK_g.jpeg">
+        </div>
+        <div class="jarrenContent">
+            <h2 id="bakerName"> Jarren Calizo <br> <span> Cheesecake Baker</span></h2>
+        </div>
+    </div>
+
+    <script src="javascripts/stuff.js"></script>
+    
+</body>
+</html>
