@@ -23,52 +23,19 @@ $(document).ready(function(){
             }
         }
     });
-    // Modification #2
-    $('#Jan').on('click', function() {
-        $('#monthAdjust').html('Jan');
-    });
+    // Modification #2 - Remodified HW #4
+    $(".dropdown-content a").click(function(){
+        var changeMonth = $(this).text(); //stores selected month in a variable
+        $('#monthAdjust').html(changeMonth); //change button to stored selected month
 
-    $('#Feb').on('click', function() {
-        $('#monthAdjust').html('Feb');
-    });
+        $.post('http://localhost:3000/orders', function(orderData){ //read in postJSON in orders.js
+            var orderByMonth = JSON.parse(orderData); //converts JSON strings to JSON objects
 
-    $('#Mar').on('click', function() {
-        $('#monthAdjust').html('Mar');
+            //populate each month's data with orders.js's array from JSON Objects Form
+            $("#listCherry").html(orderByMonth.data[0].quantity + " " + orderByMonth.data[0].topping);
+            $("#listChocolate").html(orderByMonth.data[2].quantity + " " + orderByMonth.data[2].topping);
+            $("#listPlain").html(orderByMonth.data[1].quantity + " " + orderByMonth.data[1].topping);
+        });
     });
-
-    $('#Apr').on('click', function() {
-        $('#monthAdjust').html('Apr');
-    });
-
-    $('#May').on('click', function() {
-        $('#monthAdjust').html('May');
-    });
-
-    $('#Jun').on('click', function() {
-        $('#monthAdjust').html('Jun');
-    });
-
-    $('#Jul').on('click', function() {
-        $('#monthAdjust').html('Jul');
-    });
-
-    $('#Aug').on('click', function() {
-        $('#monthAdjust').html('Aug');
-    });
-
-    $('#Sep').on('click', function() {
-        $('#monthAdjust').html('Sep');
-    });
-
-    $('#Oct').on('click', function() {
-        $('#monthAdjust').html('Oct');
-    });
-
-    $('#Nov').on('click', function() {
-        $('#monthAdjust').html('Nov');
-    });
-
-    $('#Dec').on('click', function() {
-        $('#monthAdjust').html('Dec');
-    });
+    
 });
